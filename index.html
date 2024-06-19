@@ -1,0 +1,367 @@
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e6e9;
+    padding: 80px;
+  }
+
+  @media (max-width: 991px) {
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .title-section {
+    display: flex;
+    margin-top: 8px;
+    width: 1200px;
+    max-width: 100%;
+    gap: 20px;
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 991px) {
+    .title-section {
+      flex-wrap: wrap;
+    }
+  }
+
+  .icon {
+    font-family: Inter, sans-serif;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background-color: #fff;
+    color: #000;
+    white-space: nowrap;
+    width: 68px;
+    height: 68px;
+    padding: 16px;
+  }
+
+  @media (max-width: 991px) {
+    .icon {
+      white-space: initial;
+    }
+  }
+
+  .title {
+    color: var(--Tex-primary, #212121);
+    font-family: Inter, sans-serif;
+    flex: 1;
+    margin: auto 0;
+  }
+
+  @media (max-width: 991px) {
+    .title {
+      max-width: 100%;
+    }
+  }
+
+  .movie-section {
+    border-radius: 43px;
+    background-color: #f3f3f4;
+    display: flex;
+    margin-top: 48px;
+    width: 1200px;
+    max-width: 100%;
+    gap: 20px;
+    padding: 33px 32px;
+  }
+
+  @media (max-width: 991px) {
+    .movie-section {
+      flex-wrap: wrap;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  }
+
+  .movie-container {
+    flex: 1;
+  }
+
+  @media (max-width: 991px) {
+    .movie-container {
+      max-width: 100%;
+    }
+  }
+
+  .movie-content {
+    display: flex;
+    gap: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .movie-content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+  }
+
+  .movie-image {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 21%;
+    margin-left: 0px;
+  }
+
+  @media (max-width: 991px) {
+    .movie-image {
+      width: 100%;
+    }
+  }
+
+  .image {
+    aspect-ratio: 0.69;
+    object-fit: auto;
+    object-position: center;
+    width: 208px;
+    max-width: 100%;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 991px) {
+    .image {
+      margin-top: 24px;
+    }
+  }
+
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 79%;
+    margin-left: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .movie-details {
+      width: 100%;
+    }
+  }
+
+  .details-content {
+    align-items: start;
+    align-self: stretch;
+    display: flex;
+    flex-grow: 1;
+    padding-bottom: 41px;
+    flex-direction: column;
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+  }
+
+  @media (max-width: 991px) {
+    .details-content {
+      max-width: 100%;
+      margin-top: 24px;
+    }
+  }
+
+  .year {
+    font-family: Inter, sans-serif;
+    justify-content: center;
+    border-radius: 16px;
+    background-color: #fff;
+    white-space: nowrap;
+    padding: 8px 16px;
+  }
+
+  @media (max-width: 991px) {
+    .year {
+      white-space: initial;
+    }
+  }
+
+  .movie-title {
+    margin-top: 32px;
+    font: 700 24px Inter, sans-serif;
+  }
+
+  .genres {
+    display: flex;
+    margin-top: 16px;
+    gap: 14px;
+    color: var(--Text-Secondary, #6b6b6b);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 991px) {
+    .genres {
+      white-space: initial;
+    }
+  }
+
+  .genre {
+    display: flex;
+    gap: 2px;
+  }
+
+  @media (max-width: 991px) {
+    .genre {
+      white-space: initial;
+    }
+  }
+
+  .genre-text {
+    font-family: Inter, sans-serif;
+  }
+
+  .description {
+    align-self: stretch;
+    color: var(--Tex-primary, #212121);
+    font-family: Inter, sans-serif;
+    line-height: 24px;
+    margin-top: 32px;
+  }
+
+  @media (max-width: 991px) {
+    .description {
+      max-width: 100%;
+    }
+  }
+
+  .rating {
+    justify-content: center;
+    border-radius: 16px;
+    backdrop-filter: blur(18px);
+    background-color: #212121;
+    align-self: start;
+    color: #8dff47;
+    white-space: nowrap;
+    padding: 16px;
+    font: 700 16px Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .rating {
+      white-space: initial;
+    }
+  }
+</style>
+
+<section class="container">
+  <div class="title-section">
+    <div class="icon">📺</div>
+    <div class="title">Most popular movies</div>
+  </div>
+
+  <article class="movie-section">
+    <div class="movie-container">
+      <div class="movie-content">
+        <div class="movie-image">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5780caf30f48380d7112e1399a1c6072541e7d8943f28042eeb84c583e7525d?apiKey=729604aae47a4f5386a15efff45f86b2&" class="image" alt="Inside Out 2 poster" />
+        </div>
+        <div class="movie-details">
+          <div class="details-content">
+            <div class="year">2024</div>
+            <div class="movie-title">Inside Out 2</div>
+            <div class="genres">
+              <div class="genre">
+                <div class="genre-text">Animation</div>
+                <div class="genre-text">,</div>
+              </div>
+              <div class="genre">
+                <div class="genre-text">Animation</div>
+                <div class="genre-text">,</div>
+              </div>
+              <div class="genre">
+                <div class="genre-text">Animation</div>
+                <div class="genre-text">,</div>
+              </div>
+            </div>
+            <div class="description">
+              Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely
+              unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful
+              operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not
+              alone.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rating">79%</div>
+  </article>
+
+  <article class="movie-section">
+    <div class="movie-container">
+      <div class="movie-content">
+        <div class="movie-image">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5780caf30f48380d7112e1399a1c6072541e7d8943f28042eeb84c583e7525d?apiKey=729604aae47a4f5386a15efff45f86b2&" class="image" alt="Inside Out 2 poster" />
+        </div>
+        <div class="movie-details">
+          <div class="details-content">
+            <div class="year">2024</div>
+            <div class="movie-title">Inside Out 2</div>
+            <div class="genres">
+              <div class="genre">
+                <div class="genre-text">Animation</div>
+                <div class="genre-text">,</div>
+              </div>
+              <div class="genre">
+                <div class="genre-text">Animation</div>
+                <div class="genre-text">,</div>
+              </div>
+              <div class="genre">
+                <div class="genre-text">Animation</div>
+                <div class="genre-text">,</div>
+              </div>
+            </div>
+            <div class="description">
+              Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely
+              unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful
+              operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not
+              alone.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rating">79%</div>
+  </article>
+
+  <article class="movie-section">
+    <div class="movie-container">
+      <div class="movie-content">
+        <div class="movie-image">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5780caf30f48380d7112e1399a1c6072541e7d8943f28042eeb84c583e7525d?apiKey=729604aae47a4f5386a15efff45f86b2&" class="image" alt="Inside Out 2 poster" />
+        </div>
+        <div class="movie-details">
+          <div class="details-content">
+            <div class="year">2024</div>
+            <div class="movie-title">Inside Out 2</div>
+            <div class="genres">
+              <div class="genre">
+                <div class="genre-text">Animation</div>
+                <div class="genre-text">,</div>
+              </div>
+              <div class="genre">
+                <div class="genre-text">Animation</div>
+                <div class="genre-text">,</div>
+              </div>
+              <div class="genre">
+                <div class="genre-text">Animation</div>
+                <div class="genre-text">,</div>
+              </div>
+            </div>
+            <div class="description">
+              Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely
+              unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful
+              operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not
+              alone.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rating">79%</div>
+  </article>
+</section>
